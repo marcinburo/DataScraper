@@ -11,12 +11,12 @@ and run desired app container.
 # How to run command for data scrapping:
 
 In order run data scrape command please go to main app directory. From there please run 
-`bin/console scraper:scrape-data`
+`docker-compose exec app sh -c "php bin/console scraper:scrape-data"`
 
 # How to run tests:
 
 If You would like to verify if app is working fine please go to app root directory.
-From there please run `./bin/phpunit`
+From there please run `docker-compose exec app sh -c "./bin/phpunit"`
 
 # Notes:
 
