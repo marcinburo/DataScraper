@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ops/Dockerfile
+    image: datascraper:dev
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - db
+    volumes:
+      - .:/var/www/DataScraper
+    environment:
+      APP_ENV: "dev"
+
